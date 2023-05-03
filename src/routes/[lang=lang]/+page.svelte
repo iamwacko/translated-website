@@ -31,6 +31,4 @@
 	{$LL.summit.schedule(day)}
 </h3>
 
-<div class="spectators">
-	{$LL.spectators(spectators)}
-</div>
+<img src=/rajavauni.avif alt="Rojava University">
