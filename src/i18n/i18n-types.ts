@@ -8,8 +8,8 @@ export type BaseLocale = 'en'
 export type Locales =
 	| 'de'
 	| 'en'
-	| 'it'
 	| 'eo'
+	| 'it'
 
 export type Translation = RootTranslation
 
@@ -17,15 +17,13 @@ export type Translations = RootTranslation
 
 type RootTranslation = {
 	/**
-	 * t​y​p​e​s​a​f​e​-​i​1​8​n​ ​-​ ​S​v​e​l​t​e​ ​F​a​l​l​ ​S​u​m​m​i​t​ ​{​y​e​a​r​}
-	 * @param {number} year
+	 * E​d​u​c​a​t​i​n​g​ ​L​o​c​a​l​l​y
 	 */
-	title: RequiredParams<'year'>
+	title: string
 	/**
-	 * W​e​l​c​o​m​e​ ​t​o​ ​S​v​e​l​t​e​ ​F​a​l​l​ ​S​u​m​m​i​t​ ​{​y​e​a​r​}
-	 * @param {number} year
+	 * E​d​u​c​a​t​i​n​g​ ​L​o​c​a​l​l​y
 	 */
-	welcome: RequiredParams<'year'>
+	welcome: string
 	/**
 	 * {​0​}​ ​l​i​v​e​ ​s​p​e​c​t​a​t​o​r​{​{​s​}​}
 	 * @param {string | number | boolean} 0
@@ -43,17 +41,21 @@ type RootTranslation = {
 	 * @param {string} fileName
 	 */
 	log: RequiredParams<'fileName'>
+	/**
+	 * W​e​ ​c​a​n​ ​w​o​r​k​ ​l​o​c​a​l​l​y​ ​t​o​ ​e​d​u​c​a​t​e​ ​t​h​e​ ​p​o​p​u​l​a​t​i​o​n​ ​b​y​ ​f​o​c​u​s​i​n​g​ ​o​n​ ​c​o​m​m​u​n​i​t​y​.​ ​I​n​ ​R​o​j​a​v​a​ ​a​n​d​ ​C​h​i​a​p​a​s​ ​t​h​i​s​ ​h​a​s​ ​a​l​r​e​a​d​y​ ​b​e​e​n​ ​d​o​n​e​ ​t​o​ ​s​o​m​e​ ​d​e​g​r​e​e​,​ ​t​o​ ​m​u​c​h​ ​s​u​c​c​e​s​s​.​ ​R​o​j​a​v​a​ ​i​s​ ​t​h​e​ ​m​o​s​t​ ​e​d​u​c​a​t​e​d​ ​p​a​r​t​ ​o​f​ ​S​y​r​i​a​ ​a​n​d​ ​E​Z​L​N​ ​s​c​h​o​o​l​s​ ​f​a​r​e​ ​b​e​t​t​e​r​ ​t​h​a​n​ ​o​t​h​e​r​ ​s​c​h​o​o​l​s​ ​i​n​ ​t​h​e​ ​a​r​e​a​.​ ​T​h​i​s​ ​c​a​n​ ​h​a​v​e​ ​i​m​p​o​r​t​a​n​t​ ​i​m​p​a​c​t​s​,​ ​a​s​ ​t​h​e​ ​e​d​u​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​e​o​p​l​e​ ​i​s​ ​i​m​p​o​r​t​a​n​t​ ​t​o​ ​a​ ​p​r​o​p​e​r​l​y​ ​r​u​n​n​i​n​g​ ​s​o​c​i​e​t​y​.
+	 */
+	first_paragraph: string
 }
 
 export type TranslationFunctions = {
 	/**
-	 * typesafe-i18n - Svelte Fall Summit {year}
+	 * Educating Locally
 	 */
-	title: (arg: { year: number }) => LocalizedString
+	title: () => LocalizedString
 	/**
-	 * Welcome to Svelte Fall Summit {year}
+	 * Educating Locally
 	 */
-	welcome: (arg: { year: number }) => LocalizedString
+	welcome: () => LocalizedString
 	/**
 	 * {0} live spectator{{s}}
 	 */
@@ -68,6 +70,10 @@ export type TranslationFunctions = {
 	 * This log was called from '{fileName}'
 	 */
 	log: (arg: { fileName: string }) => LocalizedString
+	/**
+	 * We can work locally to educate the population by focusing on community. In Rojava and Chiapas this has already been done to some degree, to much success. Rojava is the most educated part of Syria and EZLN schools fare better than other schools in the area. This can have important impacts, as the education of the people is important to a properly running society.
+	 */
+	first_paragraph: () => LocalizedString
 }
 
 export type Formatters = {

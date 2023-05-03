@@ -24,11 +24,13 @@
 </script>
 
 <h2>
-	{$LL.welcome({ year: 2021 })}
+	{$LL.welcome}
 </h2>
 
 <h3>
-	{$LL.summit.schedule(day)}
+	{$LL.summit.schedule}
 </h3>
 
 <img src=/rajavauni.avif alt="Rojava University">
+
+<p>{$LL.first_paragraph}</p>
