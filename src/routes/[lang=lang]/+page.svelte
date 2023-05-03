@@ -10,7 +10,7 @@
 </script>
 
 <h2>
-	{$LL.welcome({ year: 2021 })}
+	{$LL.welcome}
 </h2>
 
 <h3>
