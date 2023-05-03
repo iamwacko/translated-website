@@ -1,7 +1,7 @@
 import type { BaseTranslation } from '../i18n-types'
 
 const en: BaseTranslation = {
-	title: 'typesafe-i18n - Svelte Fall Summit {year:number}',
+	title: 'Educating Locally',
 	welcome: 'Welcome to Svelte Fall Summit {year:number}',
 	spectators: '{0} live spectator{{s}}',
 	summit: {
