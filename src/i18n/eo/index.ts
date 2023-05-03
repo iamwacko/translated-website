@@ -8,6 +8,7 @@ const en: BaseTranslation = {
 		schedule: '{0:Date|simpleDate}',
 	},
 	log: `This log was called from '{fileName:string}'`,
+	paragraph: ``,
 }
 
 export default en

@@ -8,8 +8,8 @@ export type BaseLocale = 'en'
 export type Locales =
 	| 'de'
 	| 'en'
-	| 'it'
 	| 'eo'
+	| 'it'
 
 export type Translation = RootTranslation
 
@@ -17,15 +17,13 @@ export type Translations = RootTranslation
 
 type RootTranslation = {
 	/**
-	 * t​y​p​e​s​a​f​e​-​i​1​8​n​ ​-​ ​S​v​e​l​t​e​ ​F​a​l​l​ ​S​u​m​m​i​t​ ​{​y​e​a​r​}
-	 * @param {number} year
+	 * E​d​u​c​a​t​i​n​g​ ​L​o​c​a​l​l​y
 	 */
-	title: RequiredParams<'year'>
+	title: string
 	/**
-	 * W​e​l​c​o​m​e​ ​t​o​ ​S​v​e​l​t​e​ ​F​a​l​l​ ​S​u​m​m​i​t​ ​{​y​e​a​r​}
-	 * @param {number} year
+	 * E​d​u​c​a​t​i​n​g​ ​L​o​c​a​l​l​y
 	 */
-	welcome: RequiredParams<'year'>
+	welcome: string
 	/**
 	 * {​0​}​ ​l​i​v​e​ ​s​p​e​c​t​a​t​o​r​{​{​s​}​}
 	 * @param {string | number | boolean} 0
@@ -43,17 +41,18 @@ type RootTranslation = {
 	 * @param {string} fileName
 	 */
 	log: RequiredParams<'fileName'>
+	paragraph: string
 }
 
 export type TranslationFunctions = {
 	/**
-	 * typesafe-i18n - Svelte Fall Summit {year}
+	 * Educating Locally
 	 */
-	title: (arg: { year: number }) => LocalizedString
+	title: () => LocalizedString
 	/**
-	 * Welcome to Svelte Fall Summit {year}
+	 * Educating Locally
 	 */
-	welcome: (arg: { year: number }) => LocalizedString
+	welcome: () => LocalizedString
 	/**
 	 * {0} live spectator{{s}}
 	 */
@@ -68,6 +67,7 @@ export type TranslationFunctions = {
 	 * This log was called from '{fileName}'
 	 */
 	log: (arg: { fileName: string }) => LocalizedString
+	paragraph: () => LocalizedString
 }
 
 export type Formatters = {

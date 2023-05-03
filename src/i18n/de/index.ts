@@ -8,6 +8,7 @@ const de: Translation = {
 		schedule: '{0|simpleDate}',
 	},
 	log: `Dieses Logging wurde von '{fileName}' aufgerufen`,
+	paragraph: ``,
 }
 
 export default de
