@@ -6,20 +6,6 @@
 
 	let spectators = 0
 
-	onMount(() => {
-		const interval = setInterval(updateSpectatorCount, 2_000)
-
-		return () => clearInterval(interval)
-	})
-
-	const updateSpectatorCount = async () => {
-		const response = await fetch(
-			'/api/spectators?' + new URLSearchParams({ oldSpectators: spectators.toString() }).toString(),
-		)
-		const result = await response.json()
-		spectators = result.spectators
-	}
-
 	const day = new Date('2021-11-20')
 </script>
 
@@ -33,4 +19,4 @@
 
 <img src=/rajavauni.avif alt="Rojava University">
 
-<p>{$LL.first_paragraph}</p>
+<p>{$LL.paragraph}</p>
