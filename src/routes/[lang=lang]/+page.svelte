@@ -32,5 +32,3 @@
 </h3>
 
 <img src=/rajavauni.avif alt="Rojava University">
-
-<p>{$LL.first_paragraph}</p>
